@@ -17,6 +17,8 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    box-sizing: border-box;
+    vertical-align: top;
 }
 .calendar-day:hover {
     background-color: #f8f9fa;
@@ -41,13 +43,18 @@
 #calendar-table {
     table-layout: fixed;
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 #calendar-body {
     height: 480px;
+    position: relative;
+    overflow: hidden;
 }
 .calendar-container {
     max-width: 700px;
     margin: 0 auto;
+    min-height: 600px;
 }
 .event-content {
     font-size: 0.8em;
@@ -92,4 +99,12 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.card {
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 0 !important;
 }
